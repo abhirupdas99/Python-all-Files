@@ -1,0 +1,140 @@
+#variables are containers for storing data values
+# variables are fundamentally references to objects in memory ram
+#variables do not need to be declared with any particular type and can even change type after they have been set
+
+
+
+#datatypes in python
+
+"""data types are the classification or categorization of data items
+they determine the kind of value a variable can hold and what operations can be performed on it
+in Python, data types are dynamic and can change as needed
+this means you can reassign variables to different data types without any issues"""
+
+
+#types of data in python
+
+"""
+1. int (integer)   
+2. float (floating point number)
+3. str (string)
+4. bool (boolean)
+5. list (ordered and changeable collection)
+6. dict (dictionary, unordered, changeable and indexed collection) 
+7. tuple (ordered and unchangeable collection)
+8. set (unordered and unindexed collection)
+9. NoneType (represents the absence of a value)
+10. complex (complex numbers with real and imaginary parts)
+"""
+
+#declaring variables of different data types
+
+x=5 #int
+y=3.5 #float
+name="John" #string
+is_student=True #boolean
+fruits=["apple", "banana", "cherry"] #list
+person={"name": "Alice", "age": 25} #dictionary
+point=(10, 20) #tuple
+variable=None #NoneType
+complex_num=2 + 3j #complex number
+
+#printing the variables and their values
+
+print("Integer:", x)
+print("Float:", y)
+print("String:", name)
+print("Boolean:", is_student)
+print("List:", fruits)
+print("Dictionary:", person)
+print("Tuple:", point)
+print("NoneType:", variable)
+print("Complex Number:", complex_num)
+
+#checking the type of variables
+print("Type of x:", type(x))
+print("Type of y:", type(y))
+print("Type of name:", type(name))
+print("Type of is_student:", type(is_student))
+print("Type of fruits:", type(fruits))
+print("Type of person:", type(person))
+print("Type of point:", type(point))
+print("Type of variable:", type(variable))
+print("Type of complex_num:", type(complex_num))
+
+#you can change the type of a variable by reassigning it
+x = "Now I'm a string"
+print("New value of x:", x) 
+print("New type of x:", type(x))
+#you can also perform operations based on variable types
+y = y + 2.5
+print("New value of y:", y)
+print("New type of y:", type(y))
+
+
+#concatenating strings
+name = name + " Doe"
+print("New value of name:", name)
+
+#mutable vs immutable data types
+"""
+mutable data types can be changed after they are created
+immutable data types cannot be changed once they are created
+in Python, lists and dictionaries are examples of mutable data types,
+while strings, tuples, and frozensets are examples of immutable data types.
+"""
+#modifying a mutable data type (list)
+fruits.append("orange")
+print("Modified list:", fruits)
+
+#trying to modify an immutable data type (string)
+#name[0] = "M" #this will raise an error
+print("String remains unchanged:", name)
+#you can create a new string instead
+name = "M" + name[1:]
+print("New string:", name)
+print("Type of new name:", type(name))
+
+#demonstrating dictionary modification
+person["age"] = 26  #modifying an existing key
+person["city"] = "New York"  #adding a new key-value pair
+print("Modified dictionary:", person)
+print("Type of person:", type(person))
+
+#demonstrating tuple immutability
+#point[0] = 15 #this will raise an error
+print("Tuple remains unchanged:", point)
+#you can create a new tuple instead
+point = (15, point[1])
+print("New tuple:", point)
+print("Type of new point:", type(point))
+
+#demonstrating set modification
+my_set = {1, 2, 3}
+my_set.add(4)  #adding an element
+print("Modified set:", my_set)
+print("Type of my_set:", type(my_set))
+
+#demonstrating NoneType
+variable = "Now I have a value"
+print("New value of variable:", variable)
+print("Type of variable:", type(variable))
+variable = None  #reassigning to None
+print("Reassigned variable:", variable)
+print("Type of variable after reassignment:", type(variable))
+
+#demonstrating complex number operations
+complex_num = complex_num + (1 + 2j)
+print("New complex number:", complex_num)
+print("Type of complex_num:", type(complex_num))
+
+#you can perform arithmetic operations on complex numbers
+magnitude = abs(complex_num)
+print("Magnitude of complex_num:", magnitude)
+angle = complex_num.imag / complex_num.real
+print("Angle (imaginary/real) of complex_num:", angle)
+
+#demonstrating boolean operations
+is_student = not is_student  #toggling the boolean value
+print("New value of is_student:", is_student)
+print("Type of is_student:", type(is_student))
